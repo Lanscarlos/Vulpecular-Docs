@@ -77,13 +77,13 @@ player-join:
 
 通过简单检索后，我们找到了 **玩家进入服务器事件** 对应着 **PlayerJoinEvent**，那么这个便是事件的类名了
 
-![检索相应事件](../../resources/quick-start/14152432.png)
+![检索类名](../../resources/quick-start/14152432.png)
 
 我们接着点击进入 [**PlayerJoinEvent**](https://bukkit.windit.net/javadoc/org/bukkit/event/player/PlayerJoinEvent.html) 的介绍页面寻找它的程序包名
 
 从文档最上方可以找到关于 PlayerJoinEvent 的以下信息
 
-![检索相应事件](../../resources/quick-start/14153209.png)
+![检索包名](../../resources/quick-start/14153209.png)
 
 | 程序包 | 类名 |
 | :-- | :-- |

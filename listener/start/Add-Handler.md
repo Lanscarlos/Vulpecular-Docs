@@ -123,8 +123,10 @@ player-join:
 {% endtab %}
 {% endtabs %}
 
-配置好后我们使用指令重载一下处理模块的配置文件
+接下来我们用命令重载一下处理模块的配置文件
 
-`/rl reload registrator`
+`/rl reload handler`
 
-至此我们完成了监听模块的简单配置入门
+接着进入游戏查看效果
+
+![演示效果](../../resources/quick-start/14165417.png)
