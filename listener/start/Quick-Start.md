@@ -30,9 +30,9 @@ description: 快速创建一个自定义事件处理系统
 
 ## 存储路径
 
-监听模块的路径为 **`<服务器根目录>/plugins/Vulpecular/listener/registrators/`**
+监听模块的路径为 `<服务器根目录>/plugins/Vulpecular/listener/registrators/`
 
-处理模块的路径为 **`<服务器根目录>/plugins/Vulpecular/listener/handlers/`**
+处理模块的路径为 `<服务器根目录>/plugins/Vulpecular/listener/handlers/`
 
 插件会自动加载相应路径下的所有 YAML 文件（包括文件夹在内）
 

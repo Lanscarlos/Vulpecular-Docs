@@ -8,7 +8,7 @@ description: 注册监听模块
 
 首先我们打开监听模块路径内的 def.yml 文件
 
-**`<服务器根目录>/plugins/Vulpecular/listener/registrators/def.yml`**
+`<服务器根目录>/plugins/Vulpecular/listener/registrators/def.yml`
 
 可以看到以下内容
 
@@ -91,7 +91,7 @@ player-join:
 
 有了程序包名以及类名，我们不难得出它的全类名就是
 
-**`org.bukkit.event.player.PlayerJoinEvent`**
+`org.bukkit.event.player.PlayerJoinEvent`
 
 我们将它填入上面的 **class** 配置选项中
 
@@ -115,7 +115,7 @@ player-join:
 
 接下来我们用命令重载一下配置文件
 
-**`/rl reload registrator`**
+`/rl reload registrator`
 
 至此我们完成了监听模块的简单配置
 
