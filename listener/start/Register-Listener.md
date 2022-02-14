@@ -47,7 +47,9 @@ player-join-event:
 ```
 
 可以看到这个监听模块监听的是
+<mark style="color:purple;">
 [**PlayerJoinEvent**](https://bukkit.windit.net/javadoc/org/bukkit/event/player/PlayerJoinEvent.html)
+</mark>
 <br>
 当玩家进入服务器时便会触发这个监听模块
 
