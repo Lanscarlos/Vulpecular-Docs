@@ -129,4 +129,4 @@ player-join:
 
 接着进入游戏查看效果
 
-![演示效果](../../resources/quick-start/14165417.png)
+![演示效果](../../resources/quick-start/14165836.png)
