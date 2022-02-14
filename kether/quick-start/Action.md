@@ -28,11 +28,11 @@ Kether 支持将多条语句写在一起。
 
 这里举两个最常用的动作例子：
 
-[**print {参数1}**](https://kether.tabooproject.org/list.html#Print) 在控制台输出指定信息
+[`print {参数1}`](https://kether.tabooproject.org/list.html#Print) 在控制台输出指定信息
 > print *Hello!<br>
 > 输出内容：Hello!
 
-[**tell {参数1}**](https://kether.tabooproject.org/list.html#Tell) 向执行者发送指定信息
+[`tell {参数1}`](https://kether.tabooproject.org/list.html#Tell) 向执行者发送指定信息
 > tell *"Hello World!"<br>
 > 输出内容：Hello World!
 
@@ -44,28 +44,28 @@ Kether 支持将多条语句写在一起。
 
 这些返回值都有可能会作为参数而去为其他的动作服务
 
-> 例如动作 [**player name**](https://kether.tabooproject.org/list.html#Name) <br>
+> 例如动作 [`player name`](https://kether.tabooproject.org/list.html#Name) <br>
 > 当执行者是玩家时，其返回值便是玩家的名字
 
 ## 动作参数 Token / Action
 
 通过查阅官方文档发现，绝大多数动作都需要一个或多个参数，只有少数情况是没有参数的
 
-例如前面提到的 [**print {action}**](https://kether.tabooproject.org/list.html#Print) 就是一个典型的带参数动作，而形如 [**close**](https://kether.tabooproject.org/list.html#Close) 这一种就属于无参数动作
+例如前面提到的 [`print {action}`](https://kether.tabooproject.org/list.html#Print) 就是一个典型的带参数动作，而形如 [`close`](https://kether.tabooproject.org/list.html#Close) 这一种就属于无参数动作
 
 那么问题来了，要怎么书写参数呢？
 
-参数的写法有很多种，这里最常用的参数写法便是使用 `*` 放在参数前面，即 `*参数`
-
+参数的写法有很多种，这里最常用的参数写法便是使用 `*` 放在参数前面，即 `*参数`<br>
 例如：`*1` `*10086` `*true` `*Hello` `*黑哥哥牛逼`
 
-如果参数内含有空格，则需要在参数前后加上英文双引号 `"`，即 `*"参数"`
-
+如果参数内含有空格，则需要在参数前后加上英文双引号 `"`，即 `*"参数"`<br>
 例如：`*"Hello World!"` `*"Hello Kether!"`
 
-此外参数还有一种列表写法，使用中括号 `[` `]` 将多个参数包裹起来，即，`[ *参数1 *参数2 *参数3 ]`
+此外参数还有一种列表写法<br>
+使用中括号 `[` `]` 将多个参数包裹起来，即，`[ *参数1 *参数2 *参数3 ]`<br>
+例如：`[ *1 *3 *5 ]` `[ *Hello *Kether ]` `[ *Huai *Hei *Niu *Bi ]`
 
-此类写法仅用于需要为动作提供 列表类型的参数 的情况
+此类列表写法仅用于需要为动作提供 列表类型的参数 的情况，例如 [`all {action list}`](https://kether.tabooproject.org/list.html#All)
 
 
 > [**check {action} {symbol} {action}**](https://kether.tabooproject.org/list.html#Check)<br>
