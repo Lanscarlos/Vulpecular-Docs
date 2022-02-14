@@ -16,6 +16,6 @@
 * [快速入门](kether/quick-start/Qucik-Start.md)
     * [执行者 Sender](kether/quick-start/Sender.md)
     * [动作 Action](kether/quick-start/Action.md)
-        * [匿名动作 *](https://lanscarlos.gitbook.io/vulpecular/kether-tuo-zhan/qucik-start/action#ni-ming-dong-zuo)
+        * [匿名动作 *](kether/quick-start/Action.md#匿名动作)
         * [匿名代码块 Block](kether/quick-start/Action.md)
     * [命名空间 Namespace](kether/quick-start/Namespace.md)
