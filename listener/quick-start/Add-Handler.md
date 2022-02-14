@@ -59,6 +59,10 @@ player-join:
 {% endtab %}
 {% endtabs %}
 
+这里可能会有人还没有接触过 **Kether脚本** 的相关内容
+
+
+
 接下来我们同样仿照上面已有的 example-handler 处理模块
 
 自己写一个 welcome-player 处理模块，用来监听 玩家进入服务器事件
