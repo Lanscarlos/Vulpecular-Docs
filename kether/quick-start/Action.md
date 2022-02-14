@@ -56,16 +56,17 @@ Kether 支持将多条语句写在一起。
 那么问题来了，要怎么书写参数呢？
 
 参数的写法有很多种，这里最常用的参数写法便是使用 `*` 放在参数前面，即 `*参数`<br>
-例如：`*1` `*10086` `*true` `*Hello` `*黑哥哥牛逼`
+例如：`*1` &nbsp; `*10086` &nbsp; `*true` `*Hello` &nbsp; `*黑哥哥牛逼`
 
 如果参数内含有空格，则需要在参数前后加上英文双引号 `"`，即 `*"参数"`<br>
-例如：`*"Hello World!"` `*"Hello Kether!"`
+例如：`*"Hello World!"` &nbsp; `*"Hello Kether!"`
 
 此外参数还有一种列表写法<br>
 使用中括号 `[` `]` 将多个参数包裹起来，即，`[ *参数1 *参数2 *参数3 ]`<br>
-例如：`[ *1 *3 *5 ]` `[ *Hello *Kether ]` `[ *Huai *Hei *Niu *Bi ]`
+例如：`[ *1 *3 *5 ]` &nbsp; `[ *Hello *Kether ]` &nbsp; `[ *Huai *Hei *Niu *Bi ]`
 
-此类列表写法仅用于需要为动作提供 列表类型的参数 的情况，例如 [`all {action list}`](https://kether.tabooproject.org/list.html#All)
+此类列表写法仅用于需要为动作提供 **列表类型的参数** 的情况<br>
+例如 [`all {action list}`](https://kether.tabooproject.org/list.html#All)
 
 
 > [**check {action} {symbol} {action}**](https://kether.tabooproject.org/list.html#Check)<br>
