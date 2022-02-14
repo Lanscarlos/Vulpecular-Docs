@@ -34,7 +34,7 @@ player-quit:
 
 接下来我们仿照上面已有的 **player-quit** 监听模块
 
-自己写一个 **player-join** 模块，用来监听 **玩家进入服务器事件**
+自己写一个 **player-join** 监听模块，用来监听 **玩家进入服务器事件**
 
 {% tabs %}
 {% tab title="def.yml" %}
@@ -114,7 +114,7 @@ player-join:
 
 ## 重载配置
 
-接下来我们用命令重载一下配置文件
+接下来我们用命令重载一下监听模块的配置文件
 
 `/rl reload registrator`
 
