@@ -16,4 +16,4 @@ Vulpecular 是一款基于 [TabooLib 6](https://github.com/TabooLib/taboolib) �
 
 ## 开源地址
 
-<https://github.com/Lanscarlos/Vulpecular>
+{% embed url="https://github.com/Lanscarlos/Vulpecular" %} 开源地址 {% endembed %}
