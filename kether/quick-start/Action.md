@@ -6,7 +6,7 @@ description: 快速了解 Kether 相关内容
 
 ## 简介
 
-[匿名动作](Anonymous-Action)
+[匿名动作](Action.md#%E7%AE%80%E4%BB%8B)
 
 {% hint style="info" %}
 
@@ -53,7 +53,7 @@ description: 快速了解 Kether 相关内容
 
 下面举几个例子来说：
 
-## <strong id="Anonymous-Action">匿名动作 *</strong>
+## 匿名动作 *
 
 顾名思义，就是没有被命名的动作，可能有人会很好奇动作怎么会没有名字
 
