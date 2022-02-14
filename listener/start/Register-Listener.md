@@ -1,5 +1,5 @@
 ---
-description: 注册监听模块
+description: 配置监听模块
 ---
 
 # 配置监听模块
@@ -112,10 +112,11 @@ player-join:
 {% endtab %}
 {% endtabs %}
 
+## 重载配置
 
 接下来我们用命令重载一下配置文件
 
 `/rl reload registrator`
 
-至此我们完成了监听模块的简单配置
+至此我们完成了监听模块的简单配置入门
 
