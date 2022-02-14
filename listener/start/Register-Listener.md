@@ -63,7 +63,11 @@ player-join:
 
 ## 事件全类名
 
-首先我们在 Bukkit 官方文档找到 **玩家进入服务器事件** 的类名全名
+全类名是由 **`程序包名 + 类名`** 组成的一个字符串
+
+要确定 事件全类名，我们得先知道 **事件的类名**，以及它的**事件的程序包名**
+
+我们在 Bukkit 官方文档找到 **玩家进入服务器事件** 对应的事件类名
 
 {% hint style="info" %}
 
@@ -71,11 +75,11 @@ player-join:
 
 {% endhint %}
 
-通过简单检索后，我们找到了 **玩家进入服务器事件** 对应着 **PlayerJoinEvent**
+通过简单检索后，我们找到了 **玩家进入服务器事件** 对应着 **PlayerJoinEvent**，那么 事件的类名就确定下来了
 
 ![检索相应事件](../../resources/quick-start/14152432.png)
 
-我们点击进入 [**PlayerJoinEvent**](https://bukkit.windit.net/javadoc/org/bukkit/event/player/PlayerJoinEvent.html) 的介绍页面
+我们接着点击进入 [**PlayerJoinEvent**](https://bukkit.windit.net/javadoc/org/bukkit/event/player/PlayerJoinEvent.html) 的介绍页面寻找它的程序包名
 
 从文档最上方可以找到关于 PlayerJoinEvent 的以下信息
 
@@ -85,159 +89,33 @@ player-join:
 | :-- | :-- |
 | org.bukkit.event.player | PlayerJoinEvent  |
 
+有了程序包名以及类名，我们不难得出它的全类名就是
 
+**`org.bukkit.event.player.PlayerJoinEvent`**
 
-
-
-
-
-
-
-玩家进入服务器事件
-
-[Bukkit 官方文档 - 玩家进入服务器事件](https://bukkit.windit.net/javadoc/org/bukkit/event/player/package-summary.html)
-<https://bukkit.windit.net/javadoc/org/bukkit/event/player/package-summary.html>
-
-写完之后应该像下面这样
+我们将它填入上面的 **class** 配置选项中
 
 {% tabs %}
 {% tab title="def.yml" %}
 ```yaml
-# 监听模块的 id
-# 可自定义 但请不要与其他监听模块 id 相同
-player-quit:
-  # 禁用当前监听模块，默认为 true
-  enable: false
-  # 监听模块的别名
-  aliases: [ 'on-quit', 'quit' ]
-  # 定义事件监听优先级
-  priority: 'NORMAL'
-  # 监听的事件
-  # 这里代表玩家离开服务器事件
-  class: 'org.bukkit.event.player.PlayerQuitEvent'
-
+# 玩家进入服务器事件
 player-join:
-  # 启用
+  # 启用监听模块
   enable: true
   # 监听模块的别名
   aliases: [ 'on-join', 'join' ]
-  # 定义事件监听优先级
-  priority: 'NORMAL'
-  # 监听的事件
+  # [必填] 监听的事件
   # 这里代表玩家进入服务器事件
   class: 'org.bukkit.event.player.PlayerJoinEvent'
+
 ```
 {% endtab %}
 {% endtabs %}
 
 
+接下来我们用命令重载一下配置文件
 
+**`/rl reload registrator`**
 
-https://bukkit.windit.net/javadoc/org/bukkit/event/player/package-summary.html
+至此我们完成了监听模块的简单配置
 
-{% tabs %}
-
-{% tab title="First Tab" %}
-Tabavxcsa
-{% endtab %}
-
-{% tab title="Second Tab" %}
-example
-{% endtab %}
-
-{% endtabs %}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-## 基础
-
-所有的监听模块都是是以 **YAML (.yml)** 文件格式配置、读取加载的
-
-一个 YAML 文件内可以配置多个监听模块
-
-## 路径
-
-监听模块的路径为 **`<服务器根目录>/plugins/Vulpecular/listener/registrators/`**
-
-插件会自动加载该路径下的所有 YAML 文件（包括文件夹在内）
-
-{% hint style="info" %}
-
-如果你不想加载某个 YAML 或 文件夹<br>
-可以在文件名最前面加上 “ **#** ”，插件会自动跳过带有“ **#** ”的文件或文件夹，例如：
-- #example.yml
-- #directory
-
-{% endhint %}
-
-如果你是第一次使用插件，可以在路径内发现 #example.yml 以及 def.yml 文件
-
-其中 #example.yml 是示例模板，里面配置的内容仅用来做说明，并不会被加载
-
-## 配置
-
-现在让我们打开 **def.yml** 你会看到如下内容：
-```yaml
-# ./plugins/Vulpecular/listener/registrators/def.yml
-player-join-event:
-  # 禁用当前监听模块
-  enable: false
-  # 监听模块的别名
-  aliases: [ 'on-join', 'join' ]
-  # 定义事件监听优先级
-  priority: 'NORMAL'
-  # 监听的事件
-  # 这里代表玩家进入服务器事件
-  class: 'org.bukkit.event.player.PlayerJoinEvent'
-```
-
-可以看到这个监听模块监听的是
-<mark style="color:purple;">
-[**PlayerJoinEvent**](https://bukkit.windit.net/javadoc/org/bukkit/event/player/PlayerJoinEvent.html)
-</mark>
-<br>
-当玩家进入服务器时便会触发这个监听模块
-
-但此时这个监听器并没有被注册，我们需要将 **enable** 设置为 **true** 后保存文件
-
-```yaml
-# ./plugins/Vulpecular/listener/registrators/def.yml
-player-join-event:
-  # 启用当前监听模块
-  enable: true
-  # 监听模块的别名
-  aliases: [ 'on-join', 'join' ]
-  # 定义事件监听优先级
-  priority: 'NORMAL'
-  # 监听的事件
-  # 这里代表玩家进入服务器事件
-  class: 'org.bukkit.event.player.PlayerJoinEvent'
-```
-
-## 重载配置
-
-配置完成后，我们需要重新加载一下刚才的配置文件
-
-在服务器后台输入以下命令来重载监听模块的配置文件
-
-`
-/rl reload registrator
-`
-
-等待插件重载完毕，至此监听模块已经成功注册了
