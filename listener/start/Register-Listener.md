@@ -16,9 +16,13 @@ description: 注册监听模块
 
 插件会自动加载该路径下的所有 YAML 文件（包括文件夹在内）
 
+{% hint style="warning" %}
+
 如果你不想加载某个 YAML 或 文件夹，可以在文件名最前面加上 “#”，插件会自动跳过带有“#”的文件，例如：
 - #example.yml
 - #directory
+
+{% endhint %}
 
 如果你是第一次使用插件，可以在路径内发现 #example.yml 以及 #def 文件夹
 
