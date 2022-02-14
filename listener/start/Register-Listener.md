@@ -74,8 +74,8 @@ player-join-event:
 
 在服务器后台输入以下命令来重载监听模块的配置文件
 
-```cmd
+`
 /rl reload registrator
-```
+`
 
 等待插件重载完毕，至此监听模块已经成功注册了
