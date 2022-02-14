@@ -59,8 +59,8 @@ def.yml 是一个简单的案例，但里面的配置内容并未被启用
 
 首先我们在 Bukkit 官方文档找到 **玩家加入服务器的事件** 的全名
 
-{% content-ref url="https://bukkit.windit.net/javadoc/org/bukkit/event/player/package-summary.html" %}
-Bukkit 官方文档 - 玩家事件大全
+{% content-ref url="Bukkit 官方文档 - 玩家事件大全" %}
+https://bukkit.windit.net/javadoc/org/bukkit/event/player/package-summary.html
 {% endcontent-ref %}
 
 写完之后应该像下面这样
