@@ -12,20 +12,20 @@ description: 注册监听模块
 
 ## 路径
 
-监听模块的路径为 **<服务器根目录>/plugins/Vulpecular/listener/registrators/**
+监听模块的路径为 **`<服务器根目录>/plugins/Vulpecular/listener/registrators/`**
 
 插件会自动加载该路径下的所有 YAML 文件（包括文件夹在内）
 
 {% hint style="info" %}
 
 如果你不想加载某个 YAML 或 文件夹<br>
-可以在文件名最前面加上 “ **#** ”，插件会自动跳过带有“ **#** ”的文件，例如：
+可以在文件名最前面加上 “ **#** ”，插件会自动跳过带有“ **#** ”的文件或文件夹，例如：
 - #example.yml
 - #directory
 
 {% endhint %}
 
-如果你是第一次使用插件，可以在路径内发现 #example.yml 以及 #def 文件夹
+如果你是第一次使用插件，可以在路径内发现 #example.yml 以及 def.yml 文件
 
 其中 #example.yml 是示例模板，里面配置的内容仅用来做说明，并不会被加载
 
@@ -53,7 +53,7 @@ player-join-event:
 <br>
 当玩家进入服务器时便会触发这个监听模块
 
-但此时这个监听器并没有被注册，我们需要将 **enable** 设置为 **true** 启用当前监听器
+但此时这个监听器并没有被注册，我们需要将 **enable** 设置为 **true** 后保存文件
 ```yaml
 # ./plugins/Vulpecular/listener/registrators/def.yml
 player-join-event:
