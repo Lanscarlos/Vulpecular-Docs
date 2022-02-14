@@ -7,7 +7,8 @@ description: 注册监听模块
 ## 配置
 
 首先我们打开监听模块路径内的 def.yml 文件
-`<服务器根目录>/plugins/Vulpecular/listener/registrators/def.yml`
+
+**`<服务器根目录>/plugins/Vulpecular/listener/registrators/def.yml`**
 
 可以看到以下内容
 
@@ -26,6 +27,7 @@ player-quit:
   # [必填] 监听的事件
   # 这里代表玩家离开服务器事件
   class: 'org.bukkit.event.player.PlayerQuitEvent'
+
 ```
 {% endtab %}
 {% endtabs %}
@@ -37,39 +39,27 @@ player-quit:
 {% tabs %}
 {% tab title="def.yml" %}
 ```yaml
-# 监听模块的 id
-# 可自定义 但请不要与其他监听模块 id 相同
-player-quit:
-  # 禁用当前监听模块，[ 默认为 true ]
-  enable: false
-  # 监听模块的别名
-  aliases: [ 'on-quit', 'quit' ]
-  # 定义事件监听优先级 [ 默认为 NORMAL ]
-  priority: 'NORMAL'
-  # [必填] 监听的事件的全类名
-  # 这里代表玩家离开服务器事件
-  class: 'org.bukkit.event.player.PlayerQuitEvent'
-
 # 玩家进入服务器事件
 player-join:
-  # 启用
+  # 启用监听模块
   enable: true
   # 监听模块的别名
   aliases: [ 'on-join', 'join' ]
   # [必填] 监听的事件
   # 这里代表玩家进入服务器事件
   class: '? ? ?'
+
 ```
 {% endtab %}
 {% endtabs %}
 
-由于 **priority** 选项默认为 **NORMAL** 这里我们可以不写
+由于 **priority** 选项默认为 **NORMAL** 这里我们可以省略不写
 
-但我们还缺少了一个必填的选项 **class**
+但我们还缺少了一个必填的选项 **class**，这里需要我们填入的是 <mark style="color:purple;">玩家进入服务器事件</mark> 的 **全类名**
 
-这里我们需要填入的是<mark style="color:purple;">玩家进入服务器事件</mark> 的 **全类名**
+那么要如何确定一个事件的全类名呢？
 
-下面将详细介绍如何确定一个事件的**全类名**
+下面我将详细介绍 如何确定一个事件的**全类名**
 
 ## 事件全类名
 
@@ -77,8 +67,7 @@ player-join:
 
 {% hint style="info" %}
 
-[Bukkit 官方文档 - 玩家事件大全](https://bukkit.windit.net/javadoc/org/bukkit/event/player/package-summary.html)
-<https://bukkit.windit.net/javadoc/org/bukkit/event/player/package-summary.html>
+[Bukkit 官方文档 - 玩家事件大全<br>https://bukkit.windit.net/javadoc/org/bukkit/event/player/package-summary.html](https://bukkit.windit.net/javadoc/org/bukkit/event/player/package-summary.html)
 
 {% endhint %}
 
