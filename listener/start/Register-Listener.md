@@ -54,6 +54,7 @@ player-join-event:
 当玩家进入服务器时便会触发这个监听模块
 
 但此时这个监听器并没有被注册，我们需要将 **enable** 设置为 **true** 后保存文件
+
 ```yaml
 # ./plugins/Vulpecular/listener/registrators/def.yml
 player-join-event:
