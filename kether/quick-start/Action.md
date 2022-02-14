@@ -14,38 +14,64 @@ description: 快速了解 Kether 相关内容
 
 ## 简介
 
-在 Kether 中，用来实现不同功能的语句称为动作
+动作是指一段可以实现一个特定功能的语句，其语句结构大致为：
 
-其中，动作也被分为 **公有动作** 以及 **私有动作**，关于这两者的区别，我会在下面介绍到 **命名空间** 时讲解
+`动作名 {参数1} {参数2...}`
 
-> 此外我认为还应该存在一种叫做匿名动作的分类，具体请看下面分析
+Kether 支持将多条语句写在一起。
+
+`动作1 {参数1} {参数2...} 动作2 {参数3} {参数4...}`
+
+需要注意的是，如果多条语句写在同一行，不同的动作语句之间需要使用 **空格符号** 分隔，否则动作2会与前面的参数2一起被视作整个参数，导致运行出错
+
+此外，根据查阅文档得知，动作分为 **公有动作** 以及 **私有动作**，关于这两者的区别，我会在后面 **命名空间** 章节详细介绍
 
 这里举两个最常用的动作例子：
 
-[**print <参数1>**](https://kether.tabooproject.org/list.html#Print) 在控制台输出指定信息
+[**print {参数1}**](https://kether.tabooproject.org/list.html#Print) 在控制台输出指定信息
 > print *Hello!<br>
 > 输出内容：Hello!
 
-[**tell <参数1>**](https://kether.tabooproject.org/list.html#Tell) 向执行者发送指定信息
+[**tell {参数1}**](https://kether.tabooproject.org/list.html#Tell) 向执行者发送指定信息
 > tell *"Hello World!"<br>
 > 输出内容：Hello World!
 
+更多动作内容请前往官网查看
+
 ## 动作返回值
 
-大部分动作都会有它的返回值，返回值可能是任意类型，也可能是空值
+在 Kether 中，在动作执行完成后，会返回一个值，返回值可能是任意类型，也可能是空值
+
+这些返回值都有可能会作为参数而去为其他的动作服务
 
 > 例如动作 [**player name**](https://kether.tabooproject.org/list.html#Name) <br>
 > 当执行者是玩家时，其返回值便是玩家的名字
 
-这些返回值可能会作为参数而去为其他的动作服务
-
 ## 动作参数 Token / Action
 
-有些动作可能需要我们提供一个或多个参数才可以正常被执行
+通过查阅官方文档发现，绝大多数动作都需要一个或多个参数，只有少数情况是没有参数的
 
-例如前面提到的 [**print <参数1>**](https://kether.tabooproject.org/list.html#Print) 动作，你需要向它提供一个参数
+例如前面提到的 [**print {action}**](https://kether.tabooproject.org/list.html#Print) 就是一个典型的带参数动作，而形如 [**close**](https://kether.tabooproject.org/list.html#Close) 这一种就属于无参数动作
 
-## 嵌套动作
+那么问题来了，要怎么书写参数呢？
+
+参数的写法有很多种，这里最常用的参数写法便是使用 `*` 放在参数前面，即 `*参数`
+
+例如：`*1` `*10086` `*true` `*Hello` `*黑哥哥牛逼`
+
+如果参数内含有空格，则需要在参数前后加上英文双引号 `"`，即 `*"参数"`
+
+例如：`*"Hello World!"` `*"Hello Kether!"`
+
+此外参数还有一种列表写法，使用中括号 `[` `]` 将多个参数包裹起来，即，`[ *参数1 *参数2 *参数3 ]`
+
+此类写法仅用于需要为动作提供 列表类型的参数 的情况
+
+
+> [**check {action} {symbol} {action}**](https://kether.tabooproject.org/list.html#Check)<br>
+> [**command {action} [as (console|player|op)]**](https://kether.tabooproject.org/list.html#Command)
+
+## 动作嵌套
 
 有些情况下，我们可能需要用到多个动作，它们往往会构成一种嵌套的结构
 

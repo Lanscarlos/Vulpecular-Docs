@@ -17,11 +17,3 @@ description: 快速了解 Kether 相关内容
 
 {% endhint %}
 
-下面我们简单了解一下 Kether 的几个相关概念
-
-
-## 变量
-
-## 命名空间 Namespace
-
-语句被分为 **公有语句** 以及 **私有语句**
