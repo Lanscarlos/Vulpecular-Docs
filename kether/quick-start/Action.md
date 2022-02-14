@@ -6,6 +6,8 @@ description: 快速了解 Kether 相关内容
 
 ## 简介
 
+[匿名动作](Anonymous-Action)
+
 {% hint style="info" %}
 
 在旧版本的 Kether 官方文档中，“**Action**” 一词翻译为 “**语句**”
@@ -51,7 +53,7 @@ description: 快速了解 Kether 相关内容
 
 下面举几个例子来说：
 
-## <strong id="Unnamed-Action">匿名动作 *</strong>
+## <strong id="Anonymous-Action">匿名动作 *</strong>
 
 顾名思义，就是没有被命名的动作，可能有人会很好奇动作怎么会没有名字
 
