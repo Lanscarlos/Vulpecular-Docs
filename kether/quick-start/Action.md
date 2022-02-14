@@ -14,20 +14,16 @@ description: 快速了解 Kether 相关内容
 
 ## 简介
 
-动作是指一段可以实现一个特定功能的语句，其语句结构大致为：
-
+动作是指一段可以实现一个特定功能的语句，其语句结构大致为：<br>
 `动作名 {参数1} {参数2...}`
 
-Kether 支持将多条语句写在一起。
-
-`动作1 {参数1} {参数2...} 动作2 {参数3} {参数4...}`
-
+我们也可以将多条语句写在一起：<br>
+`动作1 {参数1} {参数2...} 动作2 {参数3} {参数4...}`<br>
 需要注意的是，如果多条语句写在同一行，不同的动作语句之间需要使用 **空格符号** 分隔，否则动作2会与前面的参数2一起被视作整个参数，导致运行出错
 
 此外，根据查阅文档得知，动作分为 **公有动作** 以及 **私有动作**，关于这两者的区别，我会在后面 **命名空间** 章节详细介绍
 
-这里举两个最常用的动作例子：
-
+这里举两个最常用的动作例子：<br>
 [`print {参数1}`](https://kether.tabooproject.org/list.html#Print) 在控制台输出指定信息
 > print *Hello!<br>
 > 输出内容：Hello!
@@ -67,6 +63,7 @@ Kether 支持将多条语句写在一起。
 
 此类列表写法仅用于需要为动作提供 **列表类型的参数** 的情况<br>
 例如 [`all {action list}`](https://kether.tabooproject.org/list.html#All)
+[`any {action list}`](https://kether.tabooproject.org/list.html#Any)
 
 
 > [**check {action} {symbol} {action}**](https://kether.tabooproject.org/list.html#Check)<br>
