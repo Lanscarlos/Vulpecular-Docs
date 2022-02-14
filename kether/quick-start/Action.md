@@ -6,7 +6,7 @@ description: 快速了解 Kether 相关内容
 
 ## 简介
 
-[匿名动作](Action.md#%E7%AE%80%E4%BB%8B)
+[匿名动作](https://lanscarlos.gitbook.io/vulpecular/kether-tuo-zhan/qucik-start/action#ni-ming-dong-zuo)
 
 {% hint style="info" %}
 
