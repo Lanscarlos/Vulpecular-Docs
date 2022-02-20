@@ -14,7 +14,3 @@
 ## Kether 拓展
 
 * [快速入门](kether/quick-start/Qucik-Start.md)
-    * [执行者 Sender](kether/quick-start/Sender.md)
-    * [动作 Action](kether/quick-start/Action.md)
-    * [变量 Variable](kether/quick-start/Variable.md)
-    * [命名空间 Namespace](kether/quick-start/Namespace.md)

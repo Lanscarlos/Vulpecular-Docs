@@ -61,7 +61,7 @@ description: 快速了解 Kether 相关内容
 使用中括号 `[` `]` 将多个参数包裹起来，即，`[ *参数1 *参数2 *参数3 ]`<br>
 例如：`[ *1 *3 *5 ]` &nbsp; `[ *Hello *Kether ]` &nbsp; `[ *Huai *Hei *Niu *Bi ]`
 
-此类列表写法仅用于需要为动作提供 **列表类型的参数** 的情况<br>
+此类写法仅用于需要为动作提供 **列表类型的参数** 的情况<br>
 例如 [`all {action list}`](https://kether.tabooproject.org/list.html#All)
 [`any {action list}`](https://kether.tabooproject.org/list.html#Any)
 
